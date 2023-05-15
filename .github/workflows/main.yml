@@ -15,22 +15,22 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: setup node
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - name: install dependencies
+      - name: Install Dependencies
         run: npm ci
-      - name: build app
+      - name: Build App
         run: npm run build
         env:
           PUBLIC_URL: /hiseanvaldez.github.io
-      - name: upload artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./build
-      - name: deploy to github pages
+      - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v1
