@@ -1,0 +1,31 @@
+@import "tailwindcss";
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
